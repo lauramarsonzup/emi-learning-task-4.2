@@ -35,10 +35,10 @@
                                             <constraint firstAttribute="height" constant="140" id="N9H-uR-HLw"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="G9E-cO-x3R" userLabel="Stack View Forms">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="G9E-cO-x3R" userLabel="Forms Stack View">
                                         <rect key="frame" x="20" y="240" width="374" height="284"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="804-hk-Ejd" userLabel="Stack View Foto">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="804-hk-Ejd" userLabel="Photo Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="59"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJO-UF-EZB" userLabel="Foto Label">
@@ -55,7 +55,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZOK-X8-qOF" userLabel="Stack View Nome">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZOK-X8-qOF" userLabel="Name Stack View">
                                                 <rect key="frame" x="0.0" y="75" width="374" height="59"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxc-E9-uCH" userLabel="Nome Label">
@@ -72,7 +72,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-Sk-Ik2" userLabel="Stack View Bio">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-Sk-Ik2" userLabel="Bio Stack View">
                                                 <rect key="frame" x="0.0" y="150" width="374" height="59"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f32-jy-NaQ" userLabel="Bio Label">
@@ -89,7 +89,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OZY-a8-jtk" userLabel="Stack View Tecnologias">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OZY-a8-jtk" userLabel="Technologies Stack View">
                                                 <rect key="frame" x="0.0" y="225" width="374" height="59"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tecnologias:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enm-iZ-8Yl" userLabel="Tecnologias Label">
@@ -111,7 +111,7 @@
                                 </subviews>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="20" trailing="20"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-b0-YIE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-b0-YIE" userLabel="Save Button">
                                 <rect key="frame" x="20" y="794" width="374" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="7uu-IN-pxI"/>
@@ -122,6 +122,9 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                     <color key="baseBackgroundColor" name="Sawtooth Aak"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="savePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EL7-vQ-6do"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -135,6 +138,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l9f-nz-aFS" secondAttribute="trailing" id="f31-BE-iq6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bioTextField" destination="lNt-Ix-Lc2" id="wPE-Bh-BkP"/>
+                        <outlet property="nameTextField" destination="nhM-EI-V9L" id="bnh-KC-7VW"/>
+                        <outlet property="photoTextField" destination="hgG-4q-7Ed" id="2iQ-Bn-bs4"/>
+                        <outlet property="technologiesTextField" destination="bCo-JJ-BHG" id="jzu-sL-RKZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
